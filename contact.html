@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<title>PriceTagUg</title>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css"/>
+
+
+<script src="jquery-1.8.3.min.js"></script>
+<script src="jquery.mobile-1.2.0.min.js"></script>
+<script src="cordova-2.2.0.js"></script>
+
+<script>
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady(){
+    document.addEventListener("backbutton", function(e){
+       if($.mobile.activePage.is('#contactus')){
+           e.preventDefault();
+           navigator.app.exitApp();
+       }
+       else {
+           navigator.app.backHistory()
+       }
+    }, false);
+}
+
+</script>
+
+</head>
+
+<style>
+/* Center icons*/
+.ui-grid-a{text-align:center;}
+
+/* Set Row Height*/
+.ui-block-a, ui-block-b{height:100px; }
+
+/* Set label color and size*/
+.icon-label{color:green; display:block; font-size:12px;}
+
+
+</style>
+<body>
+	<div data-role="page" id="contactus">
+    	<div data-role="header">
+        <h1>PriceTag Ug</h1>
+        </div>
+        
+      <div data-role="content">
+      
+     	<div data-role="fieldcontain" style="text-align:center"  >
+		
+        <h2> Developer:</h2>
+        <img src="images/dionisiologo.png" width="300" > 
+        
+        </div>
+        
+        <div data-role="fieldcontain" style="text-align:center"  >
+		
+        <h2> Email Address:</h2>
+        <p> pricetagug@gmail.com</p>
+        
+        </div>
+        
+        
+       <div data-role="fieldcontain" style="text-align:center"  >
+		
+       <h2> PriceTag Ug</h2>
+        <p>Now You Know...</p>
+        
+        </div>
+        
+        
+         <div data-role="fieldcontain" style="text-align:center"  >
+		
+       <h4> Disclaimer:</h4>
+        <p>Dionisio Technologies assumes no liability for any damages, injury or loss arising from any
+        advert. Users are responsible for ensuring truth and accuracy of the information</p>
+        
+        </div>
+      	
+        
+        
+      
+      
+         
+      
+      </div><!--.............end page content..............-->
+		
+         
+        <div data-role="footer" data-position="fixed">
+        <p align="center">Copyright &copy; 2013  PriceTag </p>
+        </div>
+    </div><!--...................................page close...................-->
+    
+</body>
+
+
+</html>
